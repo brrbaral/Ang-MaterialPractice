@@ -41,6 +41,7 @@ import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
     MatButtonModule,
     MatBadgeModule,
     MatProgressSpinnerModule,
+    MatSidenavModule,
   ]
 })
 export class MaterialModule {}

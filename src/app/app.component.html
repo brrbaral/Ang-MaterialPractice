@@ -1,8 +1,14 @@
-<mat-toolbar color="primary" class="navbar">
-  <div>Bishow Raj</div>
-  <div>
-    <span>Home</span>
-    <span>About</span>
-    <span>Services</span>
-  </div>
-</mat-toolbar>
+<mat-menu #appMenu="matMenu" xPosition="after" yPosition="above">
+  <button mat-menu-item [matMenuTriggerFor]="subMenu">FrontEnd</button>
+  <button mat-menu-item>BackEnd</button>
+</mat-menu>
+
+<button mat-flat-button [matMenuTriggerFor]="appMenu" >Menu</button>
+<!--FLAT BUTTON IS STYLE-->
+
+<!--SUBMENU-->
+<mat-menu #subMenu="matMenu">
+  <button mat-menu-item>Angular</button>
+  <button mat-menu-item>React</button>
+  <button mat-menu-item>Vue</button>
+</mat-menu>
