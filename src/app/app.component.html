@@ -12,3 +12,20 @@
   <button mat-menu-item>React</button>
   <button mat-menu-item>Vue</button>
 </mat-menu>
+
+<!--LAZY RENDERING OF MENU ITEM-->
+<mat-menu #lazyMenu="matMenu">
+  <ng-template matMenuContent let-name="name">
+    <button mat-menu-item>Settings</button>
+    <button mat-menu-item>Logout {{name}}</button>
+  </ng-template>
+</mat-menu>
+
+<button mat-raised-button
+        [matMenuTriggerData]="{name:'BIshow'}"
+        [matMenuTriggerFor]="lazyMenu">Bishow
+</button>
+<button mat-raised-button
+        [matMenuTriggerData]="{name:'Santosh'}"
+        [matMenuTriggerFor]="lazyMenu">Santosh
+</button>
