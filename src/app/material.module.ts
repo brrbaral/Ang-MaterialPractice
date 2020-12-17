@@ -19,6 +19,8 @@ import {MatBadgeModule} from '@angular/material/badge';
 import {MatDividerModule} from '@angular/material/divider';
 import {MatProgressSpinnerModule} from '@angular/material/progress-spinner';
 import {MatExpansionModule} from '@angular/material/expansion';
+import {MatTabsModule} from '@angular/material/tabs';
+import {MatStepperModule} from '@angular/material/stepper';
 
 @NgModule({
   exports: [
@@ -44,6 +46,8 @@ import {MatExpansionModule} from '@angular/material/expansion';
     MatProgressSpinnerModule,
     MatSidenavModule,
     MatExpansionModule,
+    MatTabsModule,
+    MatStepperModule,
   ]
 })
 export class MaterialModule {}

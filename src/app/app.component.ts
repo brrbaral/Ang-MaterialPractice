@@ -7,5 +7,7 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'OnlineCourseUI';
-  opened = false;
+  logChange(index){
+    console.log(index);
+  }
 }
