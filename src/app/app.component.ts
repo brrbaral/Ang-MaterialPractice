@@ -7,7 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'OnlineCourseUI';
-  logChange(index){
-    console.log(index);
-  }
+  selectedValue: string;
 }

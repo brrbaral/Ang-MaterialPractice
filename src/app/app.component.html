@@ -1,28 +1,46 @@
-<!--INPUT-->
-<mat-form-field floatLabel="auto">
-  <mat-label>Name</mat-label>
-  <input matInput required>
-  <mat-hint align="end">Min. 5 characters</mat-hint>
-</mat-form-field>
-&nbsp;
+<!--&lt;!&ndash;INPUT&ndash;&gt;-->
+<!--<mat-form-field floatLabel="auto">-->
+<!--  <mat-label>Name</mat-label>-->
+<!--  <input matInput required>-->
+<!--  <mat-hint align="end">Min. 5 characters</mat-hint>-->
+<!--</mat-form-field>-->
+<!--&nbsp;-->
 
-<!--APPEARANCE=STANDARD-->
-<mat-form-field floatLabel="auto" appearance="standard">
-  <mat-label>Password</mat-label>
-  <input matInput required>
-  <mat-hint align="end">Min. 5 characters</mat-hint>
+<!--&lt;!&ndash;APPEARANCE=STANDARD&ndash;&gt;-->
+<!--<mat-form-field floatLabel="auto" appearance="standard">-->
+<!--  <mat-label>Password</mat-label>-->
+<!--  <input matInput required>-->
+<!--  <mat-hint align="end">Min. 5 characters</mat-hint>-->
+<!--</mat-form-field>-->
+<!--&nbsp;-->
+<!--&lt;!&ndash;APPEARANCE = FILL&ndash;&gt;-->
+<!--<mat-form-field floatLabel="auto" appearance="fill">-->
+<!--  <mat-label>Email:</mat-label>-->
+<!--  <input matInput required>-->
+<!--  <mat-hint align="end">Min. 5 characters</mat-hint>-->
+<!--</mat-form-field>-->
+<!--&nbsp;-->
+<!--&lt;!&ndash;APPEARANCE=OUTLINE&ndash;&gt;-->
+<!--<mat-form-field floatLabel="auto" appearance="outline">-->
+<!--  <mat-label>Address:</mat-label>-->
+<!--  <input matInput required>-->
+<!--  <mat-hint align="end">Min. 5 characters</mat-hint>-->
+<!--</mat-form-field>-->
+
+<mat-form-field>
+  <mat-label>Topics</mat-label>
+    <mat-select [(value)]="selectedValue" multiple>
+      <mat-optgroup label="web">
+      <mat-option>None</mat-option>
+      <mat-option value="angular">angular</mat-option>
+      <mat-option value="python">Python</mat-option>
+      <mat-option value="django">Django</mat-option>
+      </mat-optgroup>
+      <mat-optgroup label="backend">
+        <mat-option value="Python">Python</mat-option>
+        <mat-option value="Java">Java</mat-option>
+        <mat-option value="php">PHP</mat-option>
+      </mat-optgroup>
+    </mat-select>
 </mat-form-field>
-&nbsp;
-<!--APPEARANCE = FILL-->
-<mat-form-field floatLabel="auto" appearance="fill">
-  <mat-label>Email:</mat-label>
-  <input matInput required>
-  <mat-hint align="end">Min. 5 characters</mat-hint>
-</mat-form-field>
-&nbsp;
-<!--APPEARANCE=OUTLINE-->
-<mat-form-field floatLabel="auto" appearance="outline">
-  <mat-label>Address:</mat-label>
-  <input matInput required>
-  <mat-hint align="end">Min. 5 characters</mat-hint>
-</mat-form-field>
+{{selectedValue}}
