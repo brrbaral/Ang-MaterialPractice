@@ -1,16 +1,28 @@
-<!--STEPPER-->
-<mat-horizontal-stepper linear>
-  <mat-step label="Shipping Address" optional>
-    <p>Shipping Address Details  !</p>
-  </mat-step>
-  <mat-step label="Billing Address" completed="false">
-    <p> Billing address details</p>
-    <div>
-      <button mat-button matStepperPrevious>Back</button>
-      <button mat-button matStepperNext>Next</button>
-    </div>
-  </mat-step>
-  <mat-step label="Place Order" completed="false">
-    <p>You're ready to place your order !</p>
-  </mat-step>
-</mat-horizontal-stepper>
+<!--INPUT-->
+<mat-form-field floatLabel="auto">
+  <mat-label>Name</mat-label>
+  <input matInput required>
+  <mat-hint align="end">Min. 5 characters</mat-hint>
+</mat-form-field>
+&nbsp;
+
+<!--APPEARANCE=STANDARD-->
+<mat-form-field floatLabel="auto" appearance="standard">
+  <mat-label>Password</mat-label>
+  <input matInput required>
+  <mat-hint align="end">Min. 5 characters</mat-hint>
+</mat-form-field>
+&nbsp;
+<!--APPEARANCE = FILL-->
+<mat-form-field floatLabel="auto" appearance="fill">
+  <mat-label>Email:</mat-label>
+  <input matInput required>
+  <mat-hint align="end">Min. 5 characters</mat-hint>
+</mat-form-field>
+&nbsp;
+<!--APPEARANCE=OUTLINE-->
+<mat-form-field floatLabel="auto" appearance="outline">
+  <mat-label>Address:</mat-label>
+  <input matInput required>
+  <mat-hint align="end">Min. 5 characters</mat-hint>
+</mat-form-field>
