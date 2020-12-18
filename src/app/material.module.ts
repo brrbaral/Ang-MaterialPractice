@@ -22,6 +22,7 @@ import {MatExpansionModule} from '@angular/material/expansion';
 import {MatTabsModule} from '@angular/material/tabs';
 import {MatStepperModule} from '@angular/material/stepper';
 import {FormsModule} from '@angular/forms';
+import {MatRadioModule} from '@angular/material/radio';
 
 @NgModule({
   exports: [
@@ -50,6 +51,7 @@ import {FormsModule} from '@angular/forms';
     MatTabsModule,
     MatStepperModule,
     FormsModule,
+    MatRadioModule,
   ]
 })
 export class MaterialModule {}
