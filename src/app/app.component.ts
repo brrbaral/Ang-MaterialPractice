@@ -1,5 +1,7 @@
 import { Component } from '@angular/core';
-import {MatSnackBar} from '@angular/material/snack-bar';
+// import {MatSnackBar} from '@angular/material/snack-bar';
+import {MatDialog} from '@angular/material/dialog';
+import {DialogExampleComponent} from './dialog-example/dialog-example.component';
 
 @Component({
   selector: 'app-root',
@@ -8,15 +10,11 @@ import {MatSnackBar} from '@angular/material/snack-bar';
 })
 export class AppComponent {
   title = 'OnlineCourseUI';
-  constructor(private snackBar: MatSnackBar) {}
-  openSnackBar(message, action){
-    let snackBarRef = this.snackBar.open(message, action, {duration: 2000});
-    snackBarRef.afterDismissed().subscribe(
-      () => {
-        console.log('The snackbar was dismissed');
-      });
-    snackBarRef.onAction().subscribe(() => {
-      console.log('the snackbar was triggered');
+  constructor( public dialog: MatDialog) {}
+  openDialog(){
+    let dialogRef = this.dialog.open(DialogExampleComponent, {data: {name: 'Bishow'}});
+    dialogRef.afterClosed().subscribe(result => { //WE GET THE RESULT
+      console.log(result);
     });
   }
 }
