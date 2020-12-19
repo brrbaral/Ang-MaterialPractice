@@ -1,3 +1,8 @@
+<!--FORM FIELD FOR FILTERING PURPOSE-->
+<mat-form-field>
+  <input  (keyup)="applyFilter($event.target.value)" matInput placeholder="Filter">
+</mat-form-field>
+
 <table mat-table [dataSource]="dataSource" class="mat-elevation-z8">
 
   <!--- Note that these columns can be defined in any order.

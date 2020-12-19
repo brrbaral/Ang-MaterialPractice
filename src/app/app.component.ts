@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MatTableDataSource} from '@angular/material/table';
 // import {MatSnackBar} from '@angular/material/snack-bar';
 import {MatDialog} from '@angular/material/dialog';
 // import {DialogExampleComponent} from './dialog-example/dialog-example.component';
@@ -31,9 +32,12 @@ const ELEMENT_DATA: PeriodicElement[] = [
 export class AppComponent {
   title = 'OnlineCourseUI';
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
-  dataSource = ELEMENT_DATA;
+  dataSource = new MatTableDataSource(ELEMENT_DATA);
 
   logData(row){
     console.log(row);
+  }
+  applyFilter(filterValue: string){
+    this.dataSource.filter = filterValue.trim().toLowerCase();
   }
 }
