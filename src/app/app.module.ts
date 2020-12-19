@@ -7,15 +7,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // import { ItemsComponent } from './items/items.component';
 import {MaterialModule} from './material.module';
 import {FormsModule} from '@angular/forms';
-import { DialogExampleComponent } from './dialog-example/dialog-example.component';
 
 @NgModule({
   declarations: [
     AppComponent,
-    DialogExampleComponent,
-    // ItemsComponent
   ],
-  entryComponents: [DialogExampleComponent],
+  entryComponents: [],
   imports: [
     BrowserModule,
     AppRoutingModule,
