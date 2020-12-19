@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {MatSnackBar} from '@angular/material/snack-bar';
 
 @Component({
   selector: 'app-root',
@@ -7,5 +8,15 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'OnlineCourseUI';
-  selectedValue: string;
+  constructor(private snackBar: MatSnackBar) {}
+  openSnackBar(message, action){
+    let snackBarRef = this.snackBar.open(message, action, {duration: 2000});
+    snackBarRef.afterDismissed().subscribe(
+      () => {
+        console.log('The snackbar was dismissed');
+      });
+    snackBarRef.onAction().subscribe(() => {
+      console.log('the snackbar was triggered');
+    });
+  }
 }

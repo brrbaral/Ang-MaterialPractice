@@ -23,6 +23,9 @@ import {MatTabsModule} from '@angular/material/tabs';
 import {MatStepperModule} from '@angular/material/stepper';
 import {FormsModule} from '@angular/forms';
 import {MatRadioModule} from '@angular/material/radio';
+import {MatDatepickerModule} from '@angular/material/datepicker';
+import {MatNativeDateModule} from '@angular/material/core';
+import {MatTooltipModule} from '@angular/material/tooltip';
 
 @NgModule({
   exports: [
@@ -52,6 +55,9 @@ import {MatRadioModule} from '@angular/material/radio';
     MatStepperModule,
     FormsModule,
     MatRadioModule,
+    MatDatepickerModule,
+    MatNativeDateModule,
+    MatTooltipModule,
   ]
 })
 export class MaterialModule {}
