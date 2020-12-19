@@ -27,6 +27,7 @@ import {MatDatepickerModule} from '@angular/material/datepicker';
 import {MatNativeDateModule} from '@angular/material/core';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatDialogModule} from '@angular/material/dialog';
+import {MatSortModule} from '@angular/material/sort';
 
 @NgModule({
   exports: [
@@ -60,6 +61,7 @@ import {MatDialogModule} from '@angular/material/dialog';
     MatNativeDateModule,
     MatTooltipModule,
     MatDialogModule,
+    MatSortModule,
   ]
 })
 export class MaterialModule {}

@@ -1,5 +1,7 @@
-import { Component } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import {MatTableDataSource} from '@angular/material/table';
+import {MatSort} from '@angular/material/sort';
+import {ViewChild} from '@angular/core';
 // import {MatSnackBar} from '@angular/material/snack-bar';
 import {MatDialog} from '@angular/material/dialog';
 // import {DialogExampleComponent} from './dialog-example/dialog-example.component';
@@ -29,10 +31,15 @@ const ELEMENT_DATA: PeriodicElement[] = [
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css']
 })
-export class AppComponent {
+export class AppComponent implements OnInit{
   title = 'OnlineCourseUI';
   displayedColumns: string[] = ['position', 'name', 'weight', 'symbol'];
   dataSource = new MatTableDataSource(ELEMENT_DATA);
+
+  @ViewChild(MatSort) sort: MatSort;
+  ngOnInit(): void {
+    this.dataSource.sort = this.sort;
+  }
 
   logData(row){
     console.log(row);
