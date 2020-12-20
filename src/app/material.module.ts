@@ -28,6 +28,7 @@ import {MatNativeDateModule} from '@angular/material/core';
 import {MatTooltipModule} from '@angular/material/tooltip';
 import {MatDialogModule} from '@angular/material/dialog';
 import {MatSortModule} from '@angular/material/sort';
+import {MatPaginatorModule} from '@angular/material/paginator';
 
 @NgModule({
   exports: [
@@ -62,6 +63,7 @@ import {MatSortModule} from '@angular/material/sort';
     MatTooltipModule,
     MatDialogModule,
     MatSortModule,
+    MatPaginatorModule,
   ]
 })
 export class MaterialModule {}
